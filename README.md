@@ -8,7 +8,7 @@
 
 ## ✨ Features
 1. Creating cbz files with specified metadata (finished) and cover *(will be finished soon)*
-2. Unpacking data from existing cbz files *(will be finished soon)*
+2. Unpacking data from existing cbz files
 3. Reading metadata from existing cbz files *(will be finished soon)*
 
 ## ℹ️ What is a cbz file?
@@ -81,7 +81,10 @@ Options `--title` and `--writer` are optional and can be used to set metadata of
 </table>
 
 ### 📦 Unpacking data from existing cbz files
-*(🚧 will be implemented soon)*
+(Works basically like normal zip extractor)
+```
+java -jar cbz-utilities.jar extract "/home/danrog303/comicbook.cbz" "/home/danrog303/output-dir
+```
 
 ### 📒 Reading metadata from existing cbz files
 *(🚧 will be implemented soon)*
