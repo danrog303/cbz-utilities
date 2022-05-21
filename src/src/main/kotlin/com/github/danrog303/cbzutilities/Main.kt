@@ -1,5 +1,6 @@
 package com.github.danrog303.cbzutilities
 
-fun main(args: Array<String>) {
-    println("Hello, world")
+fun main() {
+    println("Hello, world!")
+    println("App by danrog303")
 }
