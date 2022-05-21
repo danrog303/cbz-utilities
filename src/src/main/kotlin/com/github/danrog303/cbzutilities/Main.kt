@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
     infoAction.setDefaults(mapOf("action" to "info"))
 
     // Adding arguments for "cbz-utilities create" sub action
-    // Most of the arguments are generated dynamically, based on ExpectedComitInformationEntries file
+    // Most of the arguments are generated dynamically, based on ExpectedComicInformationEntries file
     createAction.addArgument("input").help("directory with images to be converted to cbz")
     createAction.addArgument("output").help("path and name of the output file")
     for (expectedInformationEntry in ExpectedComicInformationEntries.expectedEntries) {
