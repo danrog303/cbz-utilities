@@ -1,4 +1,5 @@
 # cbz-utilities 
+![CI status](https://github.com/danrog303/cbz-utilities/actions/workflows/build.yml/badge.svg)
 ![Last updated](https://img.shields.io/github/last-commit/danrog303/cbz-utilities)
 ![MIT](https://img.shields.io/badge/license-MIT-green)
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20📝%20🏗️-FFDD67.svg)
