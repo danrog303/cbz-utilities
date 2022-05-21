@@ -35,6 +35,10 @@ fun main(args: Array<String>) {
             .help("set ${expectedInformationEntry.xmlTagName.lowercase()} metadata")
     }
 
+    // Adding arguments for "cbz-utilities extract" sub action
+    extractAction.addArgument("input").help("cbz file that will be extracted")
+    extractAction.addArgument("output").help("directory where the extracted files will be copied")
+
     // Parsing arguments and passing control to one of the actions
     try {
         val parsedArgs = parser.parseArgs(args)
