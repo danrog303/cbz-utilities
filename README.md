@@ -9,7 +9,7 @@
 ## ✨ Features
 1. Creating cbz files with specified metadata (finished) and cover *(will be finished soon)*
 2. Unpacking data from existing cbz files
-3. Reading metadata from existing cbz files *(will be finished soon)*
+3. Reading metadata from existing cbz files
 
 ## ℹ️ What is a cbz file?
 A cbz *(comic book zip)* file is a zip archive that stores content of comic book or manga. Using the [KindleComicConverter tool](https://github.com/ciromattia/kcc), such CBZ file can be converted to *epub* or *mobi* format - and this will allow you to read the comic on an ebook reader (for example, Kindle). Cbz file typically consists of two parts:
@@ -87,5 +87,8 @@ java -jar cbz-utilities.jar extract "/home/danrog303/comicbook.cbz" "/home/danro
 ```
 
 ### 📒 Reading metadata from existing cbz files
-*(🚧 will be implemented soon)*
+The following command will display all metadata recognized by the program on the console:
+```
+java -jar cbz-utilities.jar info "/home/danrog303/comicbook.cbz"
+```
 
