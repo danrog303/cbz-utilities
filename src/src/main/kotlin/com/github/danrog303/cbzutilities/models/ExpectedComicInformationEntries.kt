@@ -7,7 +7,10 @@ package com.github.danrog303.cbzutilities.models
 class ExpectedComicInformationEntries {
     companion object {
         val expectedEntries = listOf(
+            /* Adding value like this means that calling >cbz-utilities create --title XYZ<
+            will be mapped to <Title>XYZ</Title> entry in ComicInfo.xml file. */
             ComicInformationEntry("title", "Title", false),
+
             ComicInformationEntry("series", "Series", false),
             ComicInformationEntry("volume", "Volume", true),
             ComicInformationEntry("genre", "Genre", false),
