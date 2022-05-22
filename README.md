@@ -20,14 +20,19 @@ A cbz *(comic book zip)* file is a zip archive that stores content of comic book
 There are several scripts on Github that create cbz files. Unfortunately none of the scripts I found support creating a metadata file (ComicInfo.xml). I decided to create my own program which has all features needed to create comic book file.
 
 ## 🖥️ How to use?
-### 🖨️ Printing help message 
+### 🖨️ Printing help messages
+Print help message about the entire application:
 ```
-java -jar cbz-utilities.jar --help
+$ java -jar cbz-utilities.jar --help
+```
+Print help message about "create" subcommand:
+```
+$ java -jar cbz-utilities.jar create --help
 ```
 
 ### 🌈 Creating cbz file
 ```
-java -jar cbz-utilities.jar create "/home/danrog303/Documents/inputDirectory" "/home/danrog303/output.cbz" --title "Manga name" --writer "John Doe"
+$ java -jar cbz-utilities.jar create "/home/danrog303/Documents/inputDirectory" "/home/danrog303/output.cbz" --title "Manga name" --writer "John Doe"
 ```
 The input directory is a folder containing image files - each file will be a single page of the comic book. 
 The files should be numbered consecutively, so that their order does not get mixed up after conversion into a cbz file. 
@@ -83,12 +88,12 @@ Options `--title` and `--writer` are optional and can be used to set metadata of
 ### 📦 Unpacking data from existing cbz files
 (Works basically like normal zip extractor)
 ```
-java -jar cbz-utilities.jar extract "/home/danrog303/comicbook.cbz" "/home/danrog303/output-dir
+$ java -jar cbz-utilities.jar extract "/home/danrog303/comicbook.cbz" "/home/danrog303/output-dir
 ```
 
 ### 📒 Reading metadata from existing cbz files
 The following command will display all metadata recognized by the program on the console:
 ```
-java -jar cbz-utilities.jar info "/home/danrog303/comicbook.cbz"
+$ java -jar cbz-utilities.jar info "/home/danrog303/comicbook.cbz"
 ```
 
