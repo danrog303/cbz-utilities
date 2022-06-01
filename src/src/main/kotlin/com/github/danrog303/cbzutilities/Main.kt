@@ -30,6 +30,7 @@ fun main(args: Array<String>) {
     // Most of the arguments are generated dynamically, based on ExpectedComicInformationEntries file
     createAction.addArgument("input").help("directory with images to be converted to cbz")
     createAction.addArgument("output").help("path and name of the output file")
+    createAction.addArgument("--cover").help("front cover image")
     for (expectedInformationEntry in ExpectedComicInformationEntries.expectedEntries) {
         createAction.addArgument("--${expectedInformationEntry.key}")
             .help("set ${expectedInformationEntry.xmlTagName.lowercase()} metadata")

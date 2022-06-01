@@ -12,7 +12,8 @@ import java.nio.file.Paths
  * @param inputPath Path to directory that contains comic book images
  * @param outputPath Path to cbz file that will be created
  */
-class CbzPacker(private val comicInfo: ComicInfo, private val inputPath: String, private val outputPath: String) {
+class CbzPacker(private val comicInfo: ComicInfo, private val inputPath: String,
+                private val outputPath: String, private val coverImagePath: String? = null) {
     fun pack() {
         val cbzTempDir = File(Files.createTempDirectory("cbz-packer-").toFile().absolutePath)
         val comicContentTempDir = File(Paths.get(cbzTempDir.absolutePath, "ComicContent").toString())
@@ -20,6 +21,10 @@ class CbzPacker(private val comicInfo: ComicInfo, private val inputPath: String,
 
         val xmlCreator = ComicInfoXmlCreator(comicInfo)
         xmlCreator.generateXml(Paths.get(cbzTempDir.absolutePath, "ComicInfo.xml").toString())
+
+        if (coverImagePath != null) {
+            CbzCoverChange(comicContentTempDir.absolutePath).addCover(coverImagePath)
+        }
 
         val targetOutput = Paths.get(outputPath).toFile()
         ZipUtil.pack(cbzTempDir, targetOutput)

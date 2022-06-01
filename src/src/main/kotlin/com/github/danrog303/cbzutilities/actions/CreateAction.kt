@@ -1,6 +1,7 @@
 package com.github.danrog303.cbzutilities.actions
 import com.github.danrog303.cbzutilities.models.ComicInfo
 import com.github.danrog303.cbzutilities.models.ExpectedComicInformationEntries
+import com.github.danrog303.cbzutilities.packing.CbzCoverChange
 import com.github.danrog303.cbzutilities.packing.CbzPacker
 
 /**
@@ -14,6 +15,6 @@ class CreateAction(private val args: Map<String, Any>): Runnable {
             comicInfo.set(expectedInformationEntry.key, args[expectedInformationEntry.key]?.toString())
         }
 
-        CbzPacker(comicInfo, args["input"].toString(), args["output"].toString()).pack()
+        CbzPacker(comicInfo, args["input"].toString(), args["output"].toString(), args["cover"]?.toString()).pack()
     }
 }
