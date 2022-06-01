@@ -7,7 +7,7 @@
 > CLI tool for creating comic book .cbz files with specified metadata and cover. 
 
 ## ✨ Features
-1. Creating cbz files with specified metadata (finished) and cover *(will be finished soon)*
+1. Creating cbz files with specified metadata and cover
 2. Unpacking data from existing cbz files
 3. Reading metadata from existing cbz files
 
@@ -82,6 +82,10 @@ Options `--title` and `--writer` are optional and can be used to set metadata of
   <tr>
      <td>--publisher</td> 
      <td>name of the publisher</td>
+  </tr>
+  <tr>
+     <td>--cover</td> 
+     <td>path to cover image (png, jpg or jpeg; can be placed outside of input directory)</td>
   </tr>
 </table>
 
